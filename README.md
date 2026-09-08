@@ -1,73 +1,47 @@
-# Welcome to your Lovable project
+# 🌌 OrbitX Tech — Cosmic Exploration & Planetary Science Portal
 
-## Project info
+[![Live Demo](https://img.shields.io/badge/demo-online-brightgreen.svg)](https://orbitxtech-three.vercel.app/)
+[![GitHub Repo](https://img.shields.io/badge/github-repo-blue.svg)](https://github.com/Ayush1519/orbitx_tech_.git)
 
-**URL**: https://lovable.dev/projects/2c2178cd-52ea-43f8-9233-d7d3f747b31b
+**OrbitX Tech** is a space-science web application designed to make astronomy and space mission exploration engaging and accessible. It features interactive 3D visualizations, space mission tracking, real-time debris radar, live ISS monitoring, and astronomy quizzes.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## ✨ Key Features
 
-**Use Lovable**
+- 🛸 **Mission Timeline:** Chronological archive and tracker of global space missions across ISRO, NASA, ESA, SpaceX, and JAXA with launch data, destinations, and status filters.
+- 🌌 **3D Space Exploration:** Interactive visualizations of our Solar System, confirmed Exoplanets, and distant Galaxies.
+- 🛰️ **Live ISS Tracker (Spot-ISS):** Real-time orbital positioning and passes of the International Space Station.
+- 📡 **Space Debris Detector:** Interactive radar visualizer monitoring orbital debris around Earth.
+- 📚 **Knowledge Hub & Quizzes:** Curated planetary science resources, articles, and interactive quizzes to test space knowledge.
+- 🤖 **AI Cosmic Assistant:** Floating chatbot companion for space Q&A.
+- 📱 **Sleek Sci-Fi UI:** Dark cosmic glassmorphism theme, smooth animations, and a responsive hamburger navigation.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/2c2178cd-52ea-43f8-9233-d7d3f747b31b) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠️ Tech Stack
 
-**Use your preferred IDE**
+- **Frontend:** React 18, TypeScript, Vite, Tailwind CSS, Lucide Icons
+- **3D & Animations:** Three.js / React Three Fiber, Framer Motion
+- **UI Components:** Radix UI / shadcn/ui
+- **Data & APIs:** Astronomy Engine, REST APIs, Supabase
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 Getting Started
 
-Follow these steps:
+```bash
+# Clone the repository
+git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Navigate into the project folder
+cd orbitx-space-study
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Install dependencies
+npm install
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
+```
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/2c2178cd-52ea-43f8-9233-d7d3f747b31b) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
