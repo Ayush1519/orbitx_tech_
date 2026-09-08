@@ -1,0 +1,200 @@
+/* OrbitX Tech Space-Themed Design System */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Cosmic Background Colors */
+    --background: 222 47% 8%;
+    --foreground: 210 40% 98%;
+
+    /* Space Card System */
+    --card: 224 28% 12%;
+    --card-foreground: 210 40% 95%;
+
+    /* Popover Space */
+    --popover: 224 28% 12%;
+    --popover-foreground: 210 40% 95%;
+
+    /* Cosmic Primary (Stellar Blue) */
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 8%;
+    --primary-glow: 217 91% 70%;
+
+    /* Nebula Secondary */
+    --secondary: 261 73% 35%;
+    --secondary-foreground: 210 40% 98%;
+    --secondary-glow: 261 73% 45%;
+
+    /* Muted Space */
+    --muted: 224 20% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    /* Planet Accent */
+    --accent: 29 100% 60%;
+    --accent-foreground: 222 47% 8%;
+
+    /* Alert/Danger */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* UI Elements */
+    --border: 224 20% 20%;
+    --input: 224 20% 20%;
+    --ring: 217 91% 60%;
+
+    /* Galaxy Gradients */
+    --gradient-cosmic: linear-gradient(135deg, hsl(222 47% 8%), hsl(261 73% 15%));
+    --gradient-nebula: linear-gradient(45deg, hsl(217 91% 60%), hsl(261 73% 45%));
+    --gradient-stellar: linear-gradient(135deg, hsl(217 91% 60%), hsl(29 100% 60%));
+    --gradient-planet: linear-gradient(90deg, hsl(261 73% 35%), hsl(217 91% 60%));
+
+    /* Shadows & Effects */
+    --shadow-cosmic: 0 25px 50px -12px hsl(217 91% 60% / 0.25);
+    --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.4);
+    --shadow-planet: 0 0 30px hsl(29 100% 60% / 0.3);
+
+    /* Spacing & Radius */
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', monospace;
+    font-weight: 600;
+  }
+
+  .font-display {
+    font-family: 'Orbitron', monospace;
+  }
+}
+
+@layer components {
+  /* Hero gradient text effect */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent;
+  }
+
+  /* Cosmic glow effects */
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .glow-planet {
+    box-shadow: var(--shadow-planet);
+  }
+
+  /* Interactive hover effects */
+  .hover-lift {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+  }
+
+  /* Animated borders */
+  .border-glow {
+    @apply border border-primary/30 hover:border-primary/60 transition-colors duration-300;
+  }
+
+  /* Planet card styles */
+  .planet-card {
+    @apply bg-card/50 backdrop-blur-sm border-glow rounded-xl p-6 hover-lift;
+    background: linear-gradient(135deg, hsl(var(--card) / 0.7), hsl(var(--card) / 0.9));
+  }
+
+  /* Cosmic button variants */
+  .btn-cosmic {
+    @apply bg-gradient-to-r from-primary to-secondary text-primary-foreground px-8 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 glow-primary;
+  }
+
+  .btn-outline-cosmic {
+    @apply border-2 border-primary text-primary bg-transparent px-8 py-3 rounded-full font-medium transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:scale-105;
+  }
+}
+
+@layer utilities {
+  /* Background gradients */
+  .bg-cosmic {
+    background: var(--gradient-cosmic);
+  }
+
+  .bg-nebula {
+    background: var(--gradient-nebula);
+  }
+
+  .bg-stellar {
+    background: var(--gradient-stellar);
+  }
+
+  .bg-planet {
+    background: var(--gradient-planet);
+  }
+
+  /* Animation utilities */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-orbit {
+    animation: orbit 20s linear infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.6);
+  }
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
